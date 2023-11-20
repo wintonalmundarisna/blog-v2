@@ -1,5 +1,5 @@
 ## Blog V2
-Adalah blog yang telah ditambahkan fitur-fitur baru seperti :
+Adalah aplikasi web yang berisi banyak artikel buatan diri sendiri maupun orang lain, yang dimana terdapat juga dashboard admin tempat kita CRUD artikel milik kita sendiri, tentunya sudah menerapkan relasi antar tabel serta menggunakan Open API untuk keperluan get data. Fitur-fitur yang ada di dalamnya antara lain :
 1. Fitur Search
 2. Pagination
 3. Image/Carousel
@@ -7,7 +7,7 @@ Adalah blog yang telah ditambahkan fitur-fitur baru seperti :
 5. Dashboard Admin
 6. CRUD Article
 7. Categories Article
-8. Open API
+8. Using Open API
 
 ## Cara Menjalankan Program :
 1. Pastikan sudah menginstall xampp atau laragon
