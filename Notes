@@ -1,0 +1,35 @@
+@csrf = Untuk menghindari isian form dari web lain, csrf bakal bikin token hidden untuk memastikan
+eloquont sluggable = Library untuk otomatis bikin slug, ketik aja di google, nanti diarahkan ke github
+RouteServiceProvidesrs = Home 
+
+Cara menggunakan trix editor, install dulu, ambil file css dan js di folder dist, pastekan di public
+Panggila di head (liat di webnya, tinggal copas)
+Copas lagi yang dibawahnya (liat di file create)
+
+Cara hilangkan button upload files, liat style di main.blade milik (dashboard.layouts)
+Itu baru dihilangkan, biar scriptnya ga jalan tambahkan script js di file create, liat bagian paling bawah
+
+Kalo make inputan image, maka di formnya harus ditambahkan enctype, biar work, lihat create
+Kenapa butuh enctype, karna saat di ddd(dump die debug), inputan akan masuk ke request, sedangkan file akan masuk files 
+Default naronya ada di public, app, lalu storage, kalo mau dipindahin, lihat fileSystems (config)
+Kalo udah, liat di DashboardPostController, nanti filenya masuk ke public/storage/app/public/post-images
+Nanti belum bisa diakses, karna belum terhubung antara public dengan public di storage, hubungkan dulu dengan caraa tulis di terminal php artisan storage:link
+
+Kalo email org, id, dll mau bisa login, maka validasi dns di logincontroller diapus aja 
+
+php artisan make:controller ApaController --resource --model=Post
+
+Membuat middleware sendiri = php artisan make:middleware Namanya
+Lalu cari file kernel
+Kelebihan Middleware = Mudah untuk membuat authorisasi untuk banyak method sekaligus
+Kekurangannya adalah gak fleksibel
+Middleware ada di file IsAdmin
+
+GATES = Buka AuthServiceProvider (Auth bisa App bisa)
+Lalu buka AdminCategoryController
+Kelebihan gate adalah kita bisa pake dimanapun, liat sidebar
+
+
+Cara menambahkan kolom baru di table tanpa menyentuh migrasi tabel asli, buat migrasi yang exends ke tabel tujuan
+Lalu sisipkan, ketik php artisan make:migration add_is_admin_to_users_table --table=users
+Liat file add_is_admin_to_users_table
